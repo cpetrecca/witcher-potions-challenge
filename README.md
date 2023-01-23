@@ -13,6 +13,8 @@ There are three possible approaches from a statewise perspective:
  
 I will go forward with the C option as I think is the best one for demostrating overall knowledge on React functionalities.
 
+Regarding amount of Potions and damage calcultion I opted for a conf file to easily escalate o change as needed.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
