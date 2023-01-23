@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+### Author 
+Cristian Petrecca
+
+### App description and intention manifest
+Application for calculating best damage output on configurable amount of potions, some of the code structure aspects are an overkill for the requested specification but I belive its optimal for subsecuent functionalities scalations and/or changes.
+
+There are three possible approaches from a statewise perspective:
+ A: the requested as the functionality triggers on a submit button click event using useRef hook on an uncontrolled component with minimun state managment focusing on performance.
+ B: A more Reactish proposal, with full controlled component where the potions are managed with useState and useEffect hooks to automatically show result on component reevaluations after state changes.
+ C: An overcomplex solution for the challenge where we use Context API to manage the states having in mind that this potions may in the future be needed in siblings components so we avoid props drillings providing the information needed to the whole app.
+
+...could be an 4th posible option using a Flux architectural library as Redux but I don´t think makes any sense at all for this particular case.
+ 
+I will go forward with the C option as I think is the best one for demostrating overall knowledge on React functionalities.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Dependencies
+https://react-icons.github.io/react-icons
+https://chakra-ui.com/
+
+### Overall structure
+components -> Where the components lives
+    ui->Ui components
+    layout->Layout components
+datamodels -> Data models for app entities
+hooks -> Custom hooks for app
+images ->Images used 
+config ->Configuration files
+utils -> Utilities functions
+store -> Context API providers
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs all the dependencies needed stated in the package.json file. Will need to run first if you want to run the project in development mode.
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+TODO so it runs algorithm tests 
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
