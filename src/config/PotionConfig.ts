@@ -1,12 +1,13 @@
 import {IPotion, IPotionDamage} from "./../dataModels/Potion"
 
-export const potions: IPotion[] = [
-  { name: "Red", color: "red", amount: 0 },
-  { name: "Blue", color: "blue", amount: 0 },
-  { name: "Green", color: "green", amount: 0 },
-  { name: "Yellow", color: "yellow", amount: 0 },
-  { name: "Gray", color: "gray", amount: 0 },
+export enum PotionType {Red, Blue, Green, Yellow, Gray}
 
+export const potions: IPotion[] = [
+  {id: PotionType.Red,  name: "Red", color: "red", amount: 0 },
+  {id: PotionType.Blue, name: "Blue", color: "blue", amount: 0 },
+  {id: PotionType.Green, name: "Green", color: "green", amount: 0 },
+  {id: PotionType.Yellow, name: "Yellow", color: "yellow", amount: 0 },
+  {id: PotionType.Gray, name: "Gray", color: "gray", amount: 0 },
 ];
 
 export const potionDamage: IPotionDamage[] = [

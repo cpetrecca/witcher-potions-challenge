@@ -1,4 +1,5 @@
 export type IPotion = {
+  id: number;
   name: string;
   color: string;
   amount: number;
