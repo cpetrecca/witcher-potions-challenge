@@ -43,12 +43,12 @@ const PotionBox: React.FC<Props> = ({
         {name}
       </Center>
       <Center>
-        <Button colorScheme="gray" size="xs">
-          <AddIcon onClick={addPotionHandler} />
+        <Button colorScheme="gray" size="xs" onClick={addPotionHandler}>
+          <AddIcon />
         </Button>
-        <Text px="10px"> {amount}</Text>
-        <Button colorScheme="gray" size="xs">
-          <MinusIcon onClick={removePotionHandler} />
+        <Text px="10px"> {amount} </Text>
+        <Button colorScheme="gray" size="xs" onClick={removePotionHandler}>
+          <MinusIcon />
         </Button>
       </Center>
     </Box>
