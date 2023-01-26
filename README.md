@@ -18,6 +18,8 @@ Regarding the amount of Potions and damage calcultion I opted for a conf file to
 Components not really TDD made but Unit Tests in place. To be honest this iu not my strongest point but took the chance to refresh knowledge.
 
 Best damage combination algorithm TDD-made on a custom Hook
+Installed  @testing-library/react-hooks for testing Hook without making a test component 
+As an autocritic all the dev dependencies should had been instaled under that or moved in the package.json file
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

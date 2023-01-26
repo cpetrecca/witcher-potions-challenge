@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { PotionContext, PotionContextProvider } from "./potion-context";
 import { useContext } from "react";
-import { PotionType, potions } from "../config/PotionConfig";
+import { PotionType } from "../config/PotionConfig";
 
 //props array of ids for test
 type Props = {
