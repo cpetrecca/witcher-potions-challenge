@@ -17,6 +17,7 @@ const PotionMixer = () => {
           {potions.map((potion) => {
             return (
               <PotionBox
+                data-testid="potion-box"
                 key={potion.id}
                 potionId={potion.id}
                 width={potionBoxWith + "%"}

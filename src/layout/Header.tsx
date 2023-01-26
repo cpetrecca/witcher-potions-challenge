@@ -1,9 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import headerBg from './../assets/images/headerBg.png';
+import headerBg from "./../assets/images/headerBg.png";
 
 const Header = () => {
   return (
     <Box
+      role="header"
       bg="black"
       backgroundImage={`url(${headerBg})`}
       bgPosition="center"
@@ -12,8 +13,7 @@ const Header = () => {
       p={8}
       color="white"
       bgSize="cover"
-    >
-    </Box>
+    ></Box>
   );
 };
 

@@ -32,6 +32,7 @@ const PotionBox: React.FC<Props> = ({
 
   return (
     <Box
+      data-testid="potion-box"
       width={width}
       backgroundColor={color}
       pb="10px"
