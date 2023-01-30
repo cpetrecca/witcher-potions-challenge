@@ -10,7 +10,7 @@ const DUMMY_POTION = {
 };
 
 describe("<PotionBox />", () => {
-  test("Should display the potion namel.", () => {
+  test("Should display the potion name.", () => {
     render(<PotionBox {...DUMMY_POTION} />);
     const potionName = screen.getByText(DUMMY_POTION.name);
     expect(potionName).toBeInTheDocument;

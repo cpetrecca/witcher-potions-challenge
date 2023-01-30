@@ -10,9 +10,10 @@ const Main: React.FC<Props> = ({ children }: Props) => {
       w="70%"
       minW="500px"
       minH="300px"
-      border="1px solid yellow"
+      border="1px solid #e6ac00"
       borderRadius="lg"
       mt="35PX"
+      pb="10px"
     >
       {children}
     </Box>

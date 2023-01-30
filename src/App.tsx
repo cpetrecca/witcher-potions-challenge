@@ -6,7 +6,7 @@ import { Box, Center } from "@chakra-ui/react";
 
 function App() {
   return (
-    <Box w="100vw" h="100vh" bgGradient="linear(to-t,black, gray.800)">
+    <Box w="100vw" minH="100vh" bgGradient="linear(to-t,black, gray.800)" pb="10px">
       <Header />
       <Center>
         <Main >

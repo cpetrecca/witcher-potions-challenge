@@ -3,13 +3,17 @@ import { GiAssassinPocket } from "react-icons/gi";
 import PotionBox from "./PotionBox";
 import { useContext } from "react";
 import { PotionContext } from "../store/potion-context";
+import PotionAttackResult from "./PotionAttackResult";
+import usePotionMixer from "../hooks/usePotionMixer";
+
+
 
 
 const PotionMixer = () => {
   const { potions, resetPotions} = useContext(PotionContext);
+  const {calculateBestAttackCombination, bestAttackCombination, totalDamageBonus}=usePotionMixer(potions);
   const potionBoxWith = 100 / potions.length + 1;
   const spacing = potionBoxWith / potions.length + 1;
-
   return (
     <Center>
       <Box w="95%" minWidth={400} h="100%" mt="5px">
@@ -29,13 +33,16 @@ const PotionMixer = () => {
           })}
         </Stack>
         <Center>
-          <Button size="sm" mt="10px">
+          <Button size="sm" mt="10px" onClick={calculateBestAttackCombination} >
             <Icon as={GiAssassinPocket} mr="10px" />
             Attack!
           </Button>
           <Button size="sm" ml="10px" mt="10px" onClick={resetPotions}>
             reset!
           </Button>
+        </Center>
+        <Center>
+        {bestAttackCombination.length>0 && <PotionAttackResult totalDamageBonus={totalDamageBonus} attackResult={bestAttackCombination} />}
         </Center>
       </Box>
     </Center>

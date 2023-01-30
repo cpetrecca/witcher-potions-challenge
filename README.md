@@ -15,10 +15,13 @@ I will go forward with the C option as I believe is the best one for demonstrati
 
 Regarding the amount of Potions and damage calcultion I opted for a conf file to easily escalate potions or change damage logic as needed without changing the code.
 
-Components not really TDD made but Unit Tests in place. To be honest this iu not my strongest point but took the chance to refresh knowledge.
+Components not really TDD made but Unit Tests in place. To be honest this is not my strongest skill but took the chance to refresh knowledge and will be the first to say I have plenty of space room to learn here.
 
-Best damage combination algorithm TDD-made on a custom Hook
-Installed  @testing-library/react-hooks for testing Hook without making a test component 
+Best damage combination algorithm made on a custom Hook
+Installed  @testing-library/react-hooks for testing Hook without making a test component but couldnt make it work properly so tested main functionalities against dummy data.
+
+ 
+
 As an autocritic all the dev dependencies should had been instaled under that or moved in the package.json file
 
 
@@ -27,6 +30,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Dependencies
 https://react-icons.github.io/react-icons
 https://chakra-ui.com/
+@testing-library/react-hooks
 
 ### Overall structure
 components -> Where the components lives
@@ -55,7 +59,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test`
 
-TODO so it runs algorithm tests 
+Run and watch test cases for components, API context
 
 ### `npm run build`
 
