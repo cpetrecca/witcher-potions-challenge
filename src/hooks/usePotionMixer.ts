@@ -140,6 +140,7 @@ const usePotionMixer = (potions: IPotion[]) => {
     //We iterate through damage calculations and potions
     iteratePotions(orderedDamagePriority);
   };
+
   return {
     calculateBestAttackCombination,
     bestAttackCombination,

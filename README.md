@@ -20,9 +20,9 @@ Components not really TDD made but Unit Tests in place. To be honest this is not
 Best damage combination algorithm made on a custom Hook
 Installed  @testing-library/react-hooks for testing Hook without making a test component but couldnt make it work properly so tested main functionalities against dummy data.
 
- 
+ Both context API and custom hook tests made building testComponents which are no not best solutions.
 
-As an autocritic all the dev dependencies should had been instaled under that or moved in the package.json file
+As an autocritic all the dev dependencies should had been instaled under --save-dev that or moved in the package.json file
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

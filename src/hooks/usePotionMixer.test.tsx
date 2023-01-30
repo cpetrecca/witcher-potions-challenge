@@ -3,36 +3,7 @@ import React from "react";
 import UsePotionMixer from "./usePotionMixer";
 import { IPotion, IDamageOutput } from "./../dataModels/Potion";
 import { attacksToStringOp } from "./../utils/potionUtils";
-
-const CASE_TEST_1 = {
-  potions: [
-    { id: 1, name: "Red", color: "red", amount: 2 },
-    { id: 2, name: "Blue", color: "blue", amount: 1 },
-    { id: 3, name: "Green", color: "green", amount: 1 },
-    { id: 4, name: "Yellow", color: "yellow", amount: 0 },
-    { id: 5, name: "Gray", color: "gray", amount: 0 },
-  ],
-  totalDamage: 0.13,
-  potionUsage: [
-    { amountOfPotionsUsed: 3, attackDamage: 0.1 },
-    { amountOfPotionsUsed: 1, attackDamage: 0.03 },
-  ],
-};
-const CASE_TEST_2 = {
-  potions: [
-    { id: 1, name: "Red", color: "red", amount: 2 },
-    { id: 2, name: "Blue", color: "blue", amount: 2 },
-    { id: 3, name: "Green", color: "green", amount: 1 },
-    { id: 4, name: "Yellow", color: "yellow", amount: 1 },
-    { id: 5, name: "Gray", color: "gray", amount: 1 },
-  ],
-  totalDamage: 0.31,
-  potionUsage: [
-    { amountOfPotionsUsed: 5, attackDamage: 0.25 },
-    { amountOfPotionsUsed: 1, attackDamage: 0.03 },
-    { amountOfPotionsUsed: 1, attackDamage: 0.03 },
-  ],
-};
+import { TEST_CASE_1, TEST_CASE_2 } from "../config/PotionConfig";
 
 type Props = {
   potions: IPotion[];
@@ -71,35 +42,35 @@ const ToTestPotionMixerHook: React.FC<Props> = ({ potions }) => {
 
 describe("UsePotions Custom Hook.", () => {
   test("Should bring proper total damage case 1.", () => {
-    render(<ToTestPotionMixerHook potions={CASE_TEST_1.potions} />);
+    render(<ToTestPotionMixerHook potions={TEST_CASE_1.potions} />);
     const callHook = screen.getByTestId("trigger-hook");
     fireEvent.click(callHook);
     const totalDamage = screen.getByTestId("total-damage");
-    expect(+totalDamage.textContent!).toBe(CASE_TEST_1.totalDamage);
+    expect(+totalDamage.textContent!).toBe(TEST_CASE_1.totalDamage);
   });
   test("Should bring proper total damage case 2.", () => {
-    render(<ToTestPotionMixerHook potions={CASE_TEST_2.potions} />);
+    render(<ToTestPotionMixerHook potions={TEST_CASE_2.potions} />);
     const callHook = screen.getByTestId("trigger-hook");
     fireEvent.click(callHook);
     const totalDamage = screen.getByTestId("total-damage");
-    expect(+totalDamage.textContent!).toBe(CASE_TEST_2.totalDamage);
+    expect(+totalDamage.textContent!).toBe(TEST_CASE_2.totalDamage);
   });
   test("Should bring proper best case potion usage case 1.", () => {
-    render(<ToTestPotionMixerHook potions={CASE_TEST_1.potions} />);
+    render(<ToTestPotionMixerHook potions={TEST_CASE_1.potions} />);
     const callHook = screen.getByTestId("trigger-hook");
     fireEvent.click(callHook);
     const potionUsage = screen.getByTestId("potion-usage");
     expect(potionUsage.textContent).toBe(
-      bestAttackCombinationToStringToCompare(CASE_TEST_1.potionUsage)
+      bestAttackCombinationToStringToCompare(TEST_CASE_1.potionUsage)
     );
   });
   test("Should bring proper best case potion usage case 2.", () => {
-    render(<ToTestPotionMixerHook potions={CASE_TEST_2.potions} />);
+    render(<ToTestPotionMixerHook potions={TEST_CASE_2.potions} />);
     const callHook = screen.getByTestId("trigger-hook");
     fireEvent.click(callHook);
     const potionUsage = screen.getByTestId("potion-usage");
     expect(potionUsage.textContent).toBe(
-      bestAttackCombinationToStringToCompare(CASE_TEST_2.potionUsage)
+      bestAttackCombinationToStringToCompare(TEST_CASE_2.potionUsage)
     );
   });
 });

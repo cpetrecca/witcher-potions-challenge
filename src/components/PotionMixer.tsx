@@ -6,14 +6,12 @@ import { PotionContext } from "../store/potion-context";
 import PotionAttackResult from "./PotionAttackResult";
 import usePotionMixer from "../hooks/usePotionMixer";
 
-
-
-
 const PotionMixer = () => {
   const { potions, resetPotions} = useContext(PotionContext);
   const {calculateBestAttackCombination, bestAttackCombination, totalDamageBonus}=usePotionMixer(potions);
   const potionBoxWith = 100 / potions.length + 1;
   const spacing = potionBoxWith / potions.length + 1;
+
   return (
     <Center>
       <Box w="95%" minWidth={400} h="100%" mt="5px">
